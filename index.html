@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satici snake game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 Oesmoes snake game</h1>
+        
+        <div class="menu" id="menu">
+            <div class="menu-content">
+                <h2>Select Difficulty</h2>
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Lives:</span>
+                    <span id="lives">3</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Level:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">High Score:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+            <div class="controls">
+                <button id="pauseBtn" class="btn btn-primary">Pause</button>
+                <button id="restartBtn" class="btn btn-secondary">Restart</button>
+                <button id="menuBtn" class="btn btn-secondary">Menu</button>
+            </div>
+
+            <div class="powerups-info">
+                <p>⭐ Gold Food = +50pts | 🟦 Shield = Protect from walls | ⏩ Speed Boost</p>
+            </div>
+        </div>
+
+        <div class="pause-overlay" id="pauseOverlay" style="display: none;">
+            <div class="pause-menu">
+                <h2>PAUSED</h2>
+                <button id="resumeBtn" class="btn btn-primary">Resume</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
